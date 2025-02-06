@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>Austin St-Jean</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="../scritps/include.js" defer></script>
+    <script src="../scritps/carousel.js" defer></script>
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website built with HTML and CSS.</p>
-    <p>THIS IS A TEST</p>
-    <a href="./experience.html">Work & Academia</a>
+    <div id="navbar"></div>
+    <main>
+        <div id="description-container">
+            <div id="description">
+                <img src="../images/default_Image.jpg">
+                <div id="text-container">
+                    <h1>Austin St-Jean</h1>
+                    <p>Welcome to my website! My name is Austin St-Jean, a newly graduated computer science student with
+                        hands-on experience working with multiple government companies. I thrive in collaborative
+                        environments, bringing strong organizational skills and communication to every
+                        project. Here, you’ll find insights into my career, personal projects, and passions, as well as
+                        some games you may be familiar with.
+                        Feel free to explore and connect with me through my networks!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            <div id="image-container">
+                <button class="arrow left" onclick="prevSlide()">&#9665;</button>
+                <div class="carousel">
+                    <div class="image-track">
+                        <img src="../images/sadie.jpg" alt="Image 6">
+                        <img src="../images/graduation.jpg" alt="Image 3">
+                        <img src="../images/classOf20.png" alt="Image 2">
+                        <img src="../images/bunny.jpg" alt="Image 1">
+                        <img src="../images/graduation2.jpg" alt="Image 4">
+                        <img src="../images/hockey.jpg" alt="Image 5">
+                    </div>
+                </div>
+                <button class="arrow right" onclick="nextSlide()">&#9655;</button>
+            </div>
+        </div>
+
+    </main>
+    <div id="footer"></div>
 </body>
+
 </html>
