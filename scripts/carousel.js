@@ -32,8 +32,6 @@ function updateCarousel() {
     // Loop back to the start or end if we're at the first or last image
     if (index > maxIndex) index = 0;
     if (index < 0) index = maxIndex;
-    console.log(index, "asd")
-    console.log(maxIndex)
 }
 
 function nextSlide() {
