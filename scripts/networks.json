@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Gmail",
+        "image": "/images/networks/gmail.png",
+        "username": "ausitnstj10@gmail.com",
+        "link": "mailto:austinstj10@gmail.com"
+    },
+    {
+        "name": "Github",
+        "image": "/images/networks/github.png",
+        "username": "AustinStJean2003",
+        "link": "https://github.com/AustinStJean2003"
+    },
+    {
+        "name": "LinkedIn",
+        "image": "/images/networks/linkedin.png",
+        "username": "Austin St-Jean",
+        "link": "https://www.linkedin.com/in/austin-st-jean-182837205/"
+    },
+    {
+        "name": "Indeed",
+        "image": "/images/networks/indeed.png",
+        "username": "Austin St-Jean",
+        "link": "https://profile.indeed.com/?hl=en_CA&co=CA&from=gnav-menu-homepage"
+    },
+    {
+        "name": "Youtube",
+        "image": "/images/networks/youtube.png",
+        "username": "NytLyt",
+        "link": "https://www.youtube.com/@NytLyt"
+    },
+    {
+        "name": "Twitch",
+        "image": "/images/networks/twitch.png",
+        "username": "NytLytz",
+        "link": "https://www.twitch.tv/nytlytz"
+    },
+    {
+        "name": "Instagram",
+        "image": "/images/networks/instagram.png",
+        "username": "austin_stj",
+        "link": "https://www.instagram.com/austin_stj/"
+    },
+    {
+        "name": "Spotify",
+        "image": "/images/networks/spotify.png",
+        "username": "NightAsj",
+        "link": "https://open.spotify.com/user/x7cjaxrtl29m2wdmwup2nf5px?si=0a0c285d9cae4283"
+    }
+]
