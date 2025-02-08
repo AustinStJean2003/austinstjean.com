@@ -1,55 +1,67 @@
 const track = document.querySelector('.image-track');
 const images = document.querySelectorAll('.image-track img');
 const container = document.querySelector('#image-container');
+
 let index = 0;
 let scrollAmount = 0;
-let maximum = 0;
-
-function getImageWidth() {
-    const containerWidth = container.offsetWidth;
-    const imageAmount = getAmountOfImages(containerWidth);
-    const imageWidth = Math.floor(containerWidth / imageAmount); // 3 images at a time
-    return imageWidth;
-}
-
-function getAmountOfImages(width) {
-    if (width > 980) {
-        maximum = 4
-        scrollAmount = 2;
-        return 5;
-    } else {
-        maximum = 6
-        scrollAmount = 1;
-        return 4;
-    }
-}
+let visibleImages = 0;
+let totalImages = images.length;
+let imageWidth = 0;
 
 function updateCarousel() {
-    const imageWidth = getImageWidth();
-    const maxIndex = images.length - 1;
+    const containerWidth = container.offsetWidth;
+
+    if (containerWidth > 980) {
+        visibleImages = 3;
+        scrollAmount = 2;
+    } else if (containerWidth > 700) {
+        visibleImages = 2;
+        scrollAmount = 1;
+    } else {
+        visibleImages = 1;
+        scrollAmount = 1;
+    }
+
+    imageWidth = containerWidth / visibleImages;
+
+    images.forEach(img => {
+        img.style.width = `${imageWidth}px`;
+    });
+
+    track.style.width = `${totalImages * imageWidth}px`;
+
+    updatePosition();
+}
+
+function updatePosition() {
+    if (index >= totalImages) {
+        index = 0; // Loop back to start
+    } else if (index < 0) {
+        index = totalImages - visibleImages; // Loop to end
+    }
+
     const offset = index * imageWidth;
     track.style.transform = `translateX(-${offset}px)`;
-    // Loop back to the start or end if we're at the first or last image
-    if (index > maxIndex) index = 0;
-    if (index < 0) index = maxIndex;
 }
 
 function nextSlide() {
-    if (index + scrollAmount <= maximum) {
-        index += scrollAmount;
-    } else {
+    if (index + scrollAmount >= totalImages) {
         index = 0;
+    } else {
+        index += scrollAmount;
     }
-    updateCarousel();
+
+    updatePosition();
 }
 
 function prevSlide() {
-    if (index - scrollAmount >= 0) {
-        index -= scrollAmount;
+    if (index - scrollAmount < 0) {
+        index = totalImages - visibleImages;
     } else {
-        index = images.length - 1 ;
+        index -= scrollAmount;
     }
-    updateCarousel();
+
+    updatePosition();
 }
 
 updateCarousel();

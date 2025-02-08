@@ -1,5 +1,5 @@
 html, body {
-    background-color: white;
+    background-color: cyan;
     font-family: Arial, sans-serif;
     height: 100%;
     margin: 0;
@@ -8,53 +8,34 @@ html, body {
     flex-direction: column;
     width: 100%;
     overflow-x: hidden;
+    background: linear-gradient(to top,  #fff, #fffeb8, #ffcdb9);
 }
 
 main {
     flex: 1;
 }
 
-
-.loading {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
-.spinner {
-    border: 15px solid #f3f3f3;
-    border-top: 15px solid #1DB954;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
 .navbar {
     display: flex;
-    padding: 12px 150px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
     background-color: #008299;
     font-size: 1.2em;
 }
 
+.nav-links {
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+
 .nav-button {
-    flex: 1;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    padding: 10px;
+    padding: 10px 15px;
+    width: 140px;
+    font-size: 1.2em;
     color: black;
     text-decoration: none;
     background-color: white;
@@ -66,6 +47,47 @@ main {
     background-color: #ececec;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 1300px) {
+    .navbar {
+        padding: 5px 150px;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #008299;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: reveal 1s ease-in-out forwards;
+    }
+
+    .menu-toggle {
+        display: block; /* Show hamburger */
+        font-size: 70px;
+    }
+
+    .nav-button {
+       width: 50%;
+       margin: auto;
+    }
+}
+
+
 footer {
     text-align: center;
     margin: auto;
@@ -73,8 +95,8 @@ footer {
 }
 
 #footer {
-    border-top: 1px solid aliceblue;
-    background-color: aliceblue;
+    border-top: 1px solid black;
+    margin-top: 25px;
     text-align: center;
     width: 100%;
 }
@@ -91,9 +113,33 @@ footer img {
     width: 50px;
     height: 55px;
     border-radius: 40px;
-    margin-top: 10px;
+    margin: 10px 5px 0 5px;
 }
 
-footer p {
-    flex:2;
+@keyframes reveal {
+    0% {
+        top: -100px; /* Start above the container */
+        opacity: 0; /* Start with opacity 0 (invisible) */
+    }
+    50% {
+        opacity: 1; /* Make the element visible halfway through */
+    }
+    100% {
+        top: 10%; /* End at the bottom of the container */
+        opacity: 1; /* Stay fully visible */
+    }
+}
+
+@keyframes hide {
+    0% {
+        bottom: -100px; /* Start below the container */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 1; /* Make the element visible halfway */
+    }
+    100% {
+        bottom: 200px; /* End at the top of the container */
+        opacity: 1; /* Stay fully visible */
+    }
 }
