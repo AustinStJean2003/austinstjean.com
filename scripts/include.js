@@ -1,14 +1,12 @@
 // Flag to prevent adding the event listener multiple times
 let menuListenerAdded = false;
 
-// Function to load an external file into an element
-function loadComponent(url, elementId) {
+function loadComponent(url, elementId, callback = null) {
     fetch(url)
         .then(response => response.text())
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
 
-            // Ensure the menu listener is only added once
             if (!menuListenerAdded) {
                 const menuToggle = document.querySelector(".menu-toggle");
                 const navLinks = document.querySelector(".nav-links");
@@ -20,15 +18,26 @@ function loadComponent(url, elementId) {
                     });
                 }
 
-                // Mark the listener as added
                 menuListenerAdded = true;
             }
+
+            if (callback) callback();
         })
         .catch(error => console.error('Error loading component:', error));
 }
 
+function highlightActiveTab() {
+    const navButtons = document.querySelectorAll(".nav-button");
+    const currentPage = window.location.pathname.split("/").pop(); // Get current file name
+
+    navButtons.forEach(button => {
+        if (button.getAttribute("href").includes(currentPage)) {
+            button.classList.add("active");
+        }
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Load navbar and footer
-    loadComponent("../components/navbar.html", "navbar");
+    loadComponent("../components/navbar.html", "navbar", highlightActiveTab);
     loadComponent("../components/footer.html", "footer");
 });

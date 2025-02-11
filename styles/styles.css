@@ -28,13 +28,14 @@ main {
     display: flex;
     gap: 10px;
     margin: auto;
+    z-index: 2;
 }
 
 .nav-button {
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 10px 15px;
-    width: 140px;
+    width: 170px;
     font-size: 1.2em;
     color: black;
     text-decoration: none;
@@ -54,10 +55,13 @@ main {
     color: white;
 }
 
-/* Mobile Styles */
+.nav-button.active {
+    border-bottom: 4px solid #fce626;
+}
+
 @media (max-width: 1300px) {
     .navbar {
-        padding: 5px 150px;
+        padding: 5px 50px;
     }
     .nav-links {
         display: none;

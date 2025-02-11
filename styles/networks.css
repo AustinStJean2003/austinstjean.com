@@ -24,7 +24,7 @@
 .network-item img {
     width: 100px;
     border-radius: 40px;
-    background-color: aliceblue;
+    background-color: white;
 }
 
 .linkItem:nth-child(even) {
@@ -33,8 +33,10 @@
 
 .linkItem:nth-child(odd)  {
     justify-self: end;
-    margin-right: 55px; /* change this by the amount .network-item's width changes */
+    margin-right: 55px;
 }
+     /* change this by the amount .network-item's width changes */
+
 
 .username{
     padding-left: 15px;
@@ -67,12 +69,18 @@ h2 {
         align-items: center;
     }
     
+    .linkItem {
+        margin-right: 55px;
+        /* Change this with .linkitem:nth-child(odd) margin-right line 83 */
+    }
+
     .linkItem:nth-child(even) {
         justify-self: center;
     }
     
     .linkItem:nth-child(odd)  {
         justify-self: center;
-        margin-right: 0px;
+        margin-right: 55px;
+        /* Change this with .linkitem margin-right line 73 */
     }
 }
