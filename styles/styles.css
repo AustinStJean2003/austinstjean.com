@@ -24,6 +24,10 @@ main {
     font-size: 1.2em;
 }
 
+.navbar *, .navbar {
+    box-sizing: content-box;
+}
+
 .nav-links {
     display: flex;
     gap: 10px;
@@ -59,9 +63,17 @@ main {
     border-bottom: 4px solid #fce626;
 }
 
-@media (max-width: 1300px) {
+#title {
+    display: none;
+}
+
+@media (max-width: 1385px) {
     .navbar {
-        padding: 5px 50px;
+        padding: 5px 10%;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        height: 90px;
     }
     .nav-links {
         display: none;
@@ -83,14 +95,35 @@ main {
     .menu-toggle {
         display: block; /* Show hamburger */
         font-size: 70px;
+        position: absolute;
+        left: 5%;
     }
 
     .nav-button {
        width: 50%;
        margin: auto;
     }
+
+    #title {
+        display: block;
+        color: white;
+        font-size: 2.2em;
+        position: absolute;
+        text-align: center;
+    }    
 }
 
+@media (max-width: 500px) { 
+    .navbar {
+        padding: 5px 10%;
+        position: static;
+        height: 90px;
+    }
+    #title {
+        position: static;
+        margin-left: 25%;
+    }    
+}
 
 footer {
     text-align: center;
@@ -129,7 +162,7 @@ footer img {
         opacity: 1; /* Make the element visible halfway through */
     }
     100% {
-        top: 10%; /* End at the bottom of the container */
+        top: 100px; /* End at the bottom of the container */
         opacity: 1; /* Stay fully visible */
     }
 }

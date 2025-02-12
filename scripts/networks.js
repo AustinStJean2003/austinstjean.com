@@ -28,28 +28,6 @@ fetch('/scripts/networks.json')
             networkItem.appendChild(username);
 
             container.appendChild(linkItem);
-
-            // const networkItem = document.createElement('div');
-            // networkItem.classList.add('network-item');
-
-            // const linkItem = document.createElement('a')
-            // linkItem.classList.add("linkItem")
-            // linkItem.href = item.link;
-
-            // const img = document.createElement('img');
-            // img.src = item.image;
-            // img.alt = item.name;
-            // img.title = item.name;
-
-            // const username = document.createElement('div');
-            // username.classList.add('username');
-            // username.innerText = item.username;
-
-            // networkItem.appendChild(linkItem);
-            // linkItem.appendChild(img);
-            // linkItem.appendChild(username);
-
-            // container.appendChild(networkItem);
         });
     })
     .catch(error => console.error('Error loading JSON data:', error));
