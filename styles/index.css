@@ -13,11 +13,12 @@
 }
 
 #description img {
-    height: 280px;
-    width: 300px;
+    max-width: 300px;
+    min-width: 299px;
+    height: auto;
     border-radius: 20px;
-    /* flex-shrink: 0; */
 }
+
 
 #text-container {
     width: 60%;
