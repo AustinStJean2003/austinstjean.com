@@ -181,3 +181,12 @@ footer img {
         opacity: 1; /* Stay fully visible */
     }
 }
+
+@keyframes reveal {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

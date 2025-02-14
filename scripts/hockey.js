@@ -1,3 +1,4 @@
+import { createScrollToTopButton } from './passions.js';
 document.getElementById("passions-container").addEventListener("click", function (event) {
     const clickedItem = event.target.closest(".passionItem");
     if (clickedItem.textContent == "HOCKEY") {
@@ -63,9 +64,9 @@ document.getElementById("passions-container").addEventListener("click", function
                         teamDiv.appendChild(h1)
                         teamDiv.appendChild(description)
                         teamsDiv.appendChild(teamDiv)
-                        
                     })
                     container.appendChild(teamsDiv)
+                    createScrollToTopButton(container)
                 });
         }
     }

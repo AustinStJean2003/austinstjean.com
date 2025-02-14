@@ -1,114 +1,162 @@
 {
-    "buttons": [
-        "/images/passions/music.jpg",
-        "/images/passions/hockey.png",
-        "/images/passions/gaming.jpg",
-        "/images/passions/esports.jpg"
-    ],
-    "artists": [
-        "/images/passions/music/artists/nf.jpg",
-        "/images/passions/music/artists/chaseAtlantic.png",
-        "/images/passions/music/artists/jakeHill.jpeg",
-        "/images/passions/music/artists/illenium.png",
-        "/images/passions/music/artists/saraKays.jpg"
-    ],
-    "songs": [
-      {
-        "name": "September",
-        "artist": "Chole Moriondo",
-        "image": "/images/passions/music/songs/september.jpg",
-        "link": "https://open.spotify.com/track/5FsVTBjnb6cvA8FnoCVjk5?si=63b6bdbba5454c4a"
-      },      
-      {
-        "name": "Missing Her So",
-        "artist": "Atli",
-        "image": "/images/passions/music/songs/missing.png",
-        "link": "https://open.spotify.com/track/4VMvky1dEtKe2o3UNvHLXI?si=81b652885bd145a7"
-      },
-      {
-        "name": "What gives",
-        "artist": "Jake Hill",
-        "image": "/images/passions/music/songs/gives.jpg",
-        "link": "https://open.spotify.com/track/522cGPxIHT3rZ5nu7N9zu3?si=b1dada1c6d474bec"
-      },
-      {
-        "name": "Beauty In Death",
-        "artist": "Chase Atlantic",
-        "image": "/images/passions/music/songs/beauty.jpg",
-        "link": "https://open.spotify.com/track/0fAbw0psTJ6stqYftTeQqM?si=a64aef013f5a47ec"
-      },
-      {
-        "name": "Happy",
-        "artist": "NF",
-        "image": "/images/passions/music/songs/happy.jpg",
-        "link": "https://open.spotify.com/track/3ZEno9fORwMA1HPecdLi0R?si=e7e3d96099094fac"
-      },
-      {
-        "name": "Nightlight",
-        "artist": "Illenium",
-        "image": "/images/passions/music/songs/nightlight.jpg",
-        "link": "https://open.spotify.com/track/06kxa3al7bUqRRo5nAFduZ?si=4c3738b5357549d8"
-      },
-      {
-        "name": "Heaven and Back",
-        "artist": "Chase Atlantic",
-        "image": "/images/passions/music/songs/heaven.jpg",
-        "link": ""
-      },
-      {
-        "name": "No Matter the Season",
-        "artist": "Sara Kays",
-        "image": "/images/passions/music/songs/season.jpg",
-        "link": "https://open.spotify.com/track/1JdQibdvxgcrB8Rv1KFndw?si=dd1ea635d58a405a"
-      },
-      {
-        "name": "ilyily",
-        "artist": "Cadence Flooria",
-        "image": "/images/passions/music/songs/ilyily.jpg",
-        "link": "https://open.spotify.com/track/4ewiHg0NkG36ky2JT3OwiB?si=219c7824c8644dc1"
-      },
-      {
-        "name": "Run Away to Mars",
-        "artist": "TALK",
-        "image": "/images/passions/music/songs/mars.jpg",
-        "link": "https://open.spotify.com/track/16ufCOlMEIJkFstIYtQT4w?si=9d8e2784c2904313"
-      },
-      {
-        "name": "If you Want Love",
-        "artist": "NF",
-        "image": "/images/passions/music/songs/love.jpg",
-        "link": "https://open.spotify.com/track/3i5qVV8azKqGFK4Gzdt5YS?si=a9c01393aa824e09"
-      }
-    ],
-    "players": [
-        {
-          "name": "Quinn Hughes",
-          "description": "Team Captain of the Vancouver Canucks and Norris trophy winner. Quinn Hughes is one of our generation's most dynamic defensemen and proves it night in and out being the best player on a consistent basis by breaking NHL records in the process. Hughes is always a delight to watch as his magic is unfazed.",
-          "image": "/images/passions/hockey/hughes.jpg"
-        },
-        {
-          "name": "Thatcher Demko",
-          "description": "Starting Goalie for the Vancouver Canucks and Vezna trophy running up. Thatcher Demko is my favourite goalie I've had the pleasure of watching. Demko has battled through injury for a lot of his career but when he has his chance to defend his net, he always shows up standing on his head and being a brick wall for the Canucks. I really want a number 35 jersey.",
-          "image": "/images/passions/hockey/demko.png"
-        },
-        {
-          "name": "Alex Burrows",
-          "description": "THE DRAGON SLAYER! I started watching hockey in 2011 and Alex Burrows and the Canucks Cup run was a huge reason why I became a fan of the team. His grit, passion, and style of hockey always put a smile on my face and he was one of the best wingers to play with the twins, leaving his legacy with the Canucks. You could always count on him for scoring big goals. THEY SLAYED THE DRAGON! ",
-          "image": "/images/passions/hockey/burrows.png"
-        }
-    ],
-    "teams": [
-      {
-        "name": "VANCOUVER CANUCKS",
-        "image": "/images/passions/hockey/rogers.png",
-        "description": "I started watching hokcey back in 2011, prime time to watch one of the greatest Canucks teams go on a run to game 7 of the Stanley Cup final. Young 8 year old me wanted to cheer for a good Canadian team and they seemed like a perfect choice. Though didn't watch much hockey that year but it sparked an interest in me that has never left. I would love to be able to travel to B.C and catch a live game at Rogers Arena. The Canucks have and always will be my number 1 despite the ups and downs, I want to continue to beleive in this team. Go Canucks Go!",
-        "shortname": "canucks"
-      },
-      {
-        "name": "OTTAWA SENATORS",
-        "image": "/images/passions/hockey/ctc.jpg",
-        "description": "Everyone who watches hockey in my family are Senator fans. I'm the only different one with a favourite team being out west but I still support the Sens through all their games... expect against the Canucks. They are my home town team and I've been to numerous live game at the Canadian Tire Center. I want nothing more but to see lord Stanley come to the nation's captial and see the celebration parade through the streets of Ottawa. Going to live games is something I love doing and you can usually see me catching the live game when the Canucks are in town. Go Sens Go!",
-        "shortname": "sens"
-      }
-    ]
+  "buttons": [
+    "/images/passions/music.jpg",
+    "/images/passions/hockey.png",
+    "/images/passions/gaming.jpg",
+    "/images/passions/esports.jpg"
+  ],
+  "artists": [
+    "/images/passions/music/artists/nf.jpg",
+    "/images/passions/music/artists/chaseAtlantic.png",
+    "/images/passions/music/artists/jakeHill.jpeg",
+    "/images/passions/music/artists/illenium.png",
+    "/images/passions/music/artists/saraKays.jpg"
+  ],
+  "songs": [
+    {
+      "name": "September",
+      "artist": "Chole Moriondo",
+      "image": "/images/passions/music/songs/september.jpg",
+      "link": "https://open.spotify.com/track/5FsVTBjnb6cvA8FnoCVjk5?si=63b6bdbba5454c4a"
+    },
+    {
+      "name": "Missing Her So",
+      "artist": "Atli",
+      "image": "/images/passions/music/songs/missing.png",
+      "link": "https://open.spotify.com/track/4VMvky1dEtKe2o3UNvHLXI?si=81b652885bd145a7"
+    },
+    {
+      "name": "What gives",
+      "artist": "Jake Hill",
+      "image": "/images/passions/music/songs/gives.jpg",
+      "link": "https://open.spotify.com/track/522cGPxIHT3rZ5nu7N9zu3?si=b1dada1c6d474bec"
+    },
+    {
+      "name": "Beauty In Death",
+      "artist": "Chase Atlantic",
+      "image": "/images/passions/music/songs/beauty.jpg",
+      "link": "https://open.spotify.com/track/0fAbw0psTJ6stqYftTeQqM?si=a64aef013f5a47ec"
+    },
+    {
+      "name": "Happy",
+      "artist": "NF",
+      "image": "/images/passions/music/songs/happy.jpg",
+      "link": "https://open.spotify.com/track/3ZEno9fORwMA1HPecdLi0R?si=e7e3d96099094fac"
+    },
+    {
+      "name": "Nightlight",
+      "artist": "Illenium",
+      "image": "/images/passions/music/songs/nightlight.jpg",
+      "link": "https://open.spotify.com/track/06kxa3al7bUqRRo5nAFduZ?si=4c3738b5357549d8"
+    },
+    {
+      "name": "Heaven and Back",
+      "artist": "Chase Atlantic",
+      "image": "/images/passions/music/songs/heaven.jpg",
+      "link": ""
+    },
+    {
+      "name": "No Matter the Season",
+      "artist": "Sara Kays",
+      "image": "/images/passions/music/songs/season.jpg",
+      "link": "https://open.spotify.com/track/1JdQibdvxgcrB8Rv1KFndw?si=dd1ea635d58a405a"
+    },
+    {
+      "name": "ilyily",
+      "artist": "Cadence Flooria",
+      "image": "/images/passions/music/songs/ilyily.jpg",
+      "link": "https://open.spotify.com/track/4ewiHg0NkG36ky2JT3OwiB?si=219c7824c8644dc1"
+    },
+    {
+      "name": "Run Away to Mars",
+      "artist": "TALK",
+      "image": "/images/passions/music/songs/mars.jpg",
+      "link": "https://open.spotify.com/track/16ufCOlMEIJkFstIYtQT4w?si=9d8e2784c2904313"
+    },
+    {
+      "name": "If you Want Love",
+      "artist": "NF",
+      "image": "/images/passions/music/songs/love.jpg",
+      "link": "https://open.spotify.com/track/3i5qVV8azKqGFK4Gzdt5YS?si=a9c01393aa824e09"
+    }
+  ],
+  "players": [
+    {
+      "name": "Quinn Hughes",
+      "description": "Team Captain of the Vancouver Canucks and Norris trophy winner. Quinn Hughes is one of our generation's most dynamic defensemen and proves it night in and out being the best player on a consistent basis by breaking NHL records in the process. Hughes is always a delight to watch as his magic is unfazed.",
+      "image": "/images/passions/hockey/hughes.jpg"
+    },
+    {
+      "name": "Thatcher Demko",
+      "description": "Starting Goalie for the Vancouver Canucks and Vezna trophy running up. Thatcher Demko is my favourite goalie I've had the pleasure of watching. Demko has battled through injury for a lot of his career but when he has his chance to defend his net, he always shows up standing on his head and being a brick wall for the Canucks. I really want a number 35 jersey.",
+      "image": "/images/passions/hockey/demko.png"
+    },
+    {
+      "name": "Alex Burrows",
+      "description": "THE DRAGON SLAYER! I started watching hockey in 2011 and Alex Burrows and the Canucks Cup run was a huge reason why I became a fan of the team. His grit, passion, and style of hockey always put a smile on my face and he was one of the best wingers to play with the twins, leaving his legacy with the Canucks. You could always count on him for scoring big goals. THEY SLAYED THE DRAGON! ",
+      "image": "/images/passions/hockey/burrows.png"
+    }
+  ],
+  "teams": [
+    {
+      "name": "VANCOUVER CANUCKS",
+      "image": "/images/passions/hockey/rogers.png",
+      "description": "I started watching hokcey back in 2011, prime time to watch one of the greatest Canucks teams go on a run to game 7 of the Stanley Cup final. Young 8 year old me wanted to cheer for a good Canadian team and they seemed like a perfect choice. Though didn't watch much hockey that year but it sparked an interest in me that has never left. I would love to be able to travel to B.C and catch a live game at Rogers Arena. The Canucks have and always will be my number 1 despite the ups and downs, I want to continue to beleive in this team. Go Canucks Go!",
+      "shortname": "canucks"
+    },
+    {
+      "name": "OTTAWA SENATORS",
+      "image": "/images/passions/hockey/ctc.jpg",
+      "description": "Everyone who watches hockey in my family are Senator fans. I'm the only different one with a favourite team being out west but I still support the Sens through all their games... expect against the Canucks. They are my home town team and I've been to numerous live game at the Canadian Tire Center. I want nothing more but to see lord Stanley come to the nation's captial and see the celebration parade through the streets of Ottawa. Going to live games is something I love doing and you can usually see me catching the live game when the Canucks are in town. Go Sens Go!",
+      "shortname": "sens"
+    }
+  ],
+  "games": [
+    {
+      "name": "Walking Dead Telltale",
+      "image": "/images/passions/games/walking.png"
+    },
+    {
+      "name": "Ark Survival",
+      "image": "/images/passions/games/ark.png"
+    },
+    {
+      "name": "Valorant",
+      "image": "/images/passions/games/valorant.png"
+    },
+    {
+      "name": "Dead By Daylight",
+      "image": "/images/passions/games/dbd.png"
+    },
+    {
+      "name": "Life Is Strange",
+      "image": "/images/passions/games/lis.png"
+    },
+    {
+      "name": "Once Human",
+      "image": "/images/passions/games/human.png"
+    },
+    {
+      "name": "Rocket League",
+      "image": "/images/passions/games/rocket.png"
+    },
+    {
+      "name": "GTA V",
+      "image": "/images/passions/games/gta.png"
+    }
+  ],
+  "reviews": [
+    {
+      "title": "Life is Stange: Double Exposure",
+      "text": " This game is good despite what other people say. Its not a 10/10 or even an 8/10, its no masterpiece but its a good damn game. A lot of what people have issues with is how it doesn't compare to the first game and its decisions and setting. Its all subjective which I for one loved the setting this game takes place, the university is beautiful and the turtle is cozy for example. I love the use of colour, blue and dark for sadness and death, and yellow and brightness for life and happiness.<br><br> The decisions on the other hand... yes... yes yes yes they do kinda suck most of the time, the major decisions literally have no impact on the story usually, it just leads to people telling you the same thing in a different tone or different way. What carried this game for me was the story and plot. Every episode had great cliff hangers and the murder mystery vibe of it all was captivating, confusing and exciting. I played the whole game in one sitting because of this and it was great finding clues and finding answers. After the murder parts are resolved it continues to be exciting and confusing with the storm and the trauma the characters are going through. It makes references to the first game all throughout the playthrough showing that trauma even more.<br><br> The characters were also fine nothing I can complain about. Most of the characters were lovable and for the ones who weren't their actions were always warranted. Again not a 10/10 not everyone is like a Max Caulfield, who in this game still matches up to the Max Caulfield from the first game so thats a big thumbs up.<br><br> Finally the ending wasn't great, think everyone can agree with that. It feels half finished cause the real ending is coming in the next game. Love it or hate it I think that's just the reality.<br><br> Overall the game was fun, its very visually appealing and the story kept my attention the whole way through. It loses me knowing most of the decisions don't mean anything but its still fun and a joy to be a part of.<br><br> 7/10",
+      "recommendation": "Recommended ✅",
+      "link": "https://steamcommunity.com/profiles/76561199054104896/recommended/"
+    },
+    {
+      "title": "Walking Dead Telltale",
+      "text": "Never did I think I'd be able to love a game series like I do this one. I heard about this series back when only Season 1 was out and it started to grow on me immediately, dying of anticipation for the next episode and season to come out. I loved being able to follow Clementine's journey and the choices the game throws at you are mind bending at times. I always loved each of the previous seasons but this season was just something different. I just finished my second play-through and I had completely forgot about most things. Everything was such a joy to play through, I didn't remember being as emotional as the first time around... maybe its cause I'm older now. Clementine almost inspires me in life. Her will to keep going, her bravery, her love for others and doing the right thing. She teaches and learns... she grows up. Obviously she wont be entirely like that for everyone but this game is what you make it. Makes everything super relatable and that's the magic in this game. You really grow to care about these fictional people on your screen, but they feel real and genuine (some exceptions...). Making everything in this game a 10/10 experience. I love this series and I always will. I can't say that about any other game, its a special masterpiece.",
+      "recommendation": "Recommended ✅",
+      "link": "https://steamcommunity.com/profiles/76561199054104896/recommended/"
+    }
+  ]
 }

@@ -1,3 +1,4 @@
+import { createScrollToTopButton } from './passions.js';
 document.getElementById("passions-container").addEventListener("click", function (event) {
     const clickedItem = event.target.closest(".passionItem");
     
@@ -111,6 +112,7 @@ document.getElementById("passions-container").addEventListener("click", function
                     table.appendChild(tbody);
                     songsContainer.appendChild(table);
                     musicDiv.appendChild(songsContainer);
+                    createScrollToTopButton(container)
                 })
         }
     }

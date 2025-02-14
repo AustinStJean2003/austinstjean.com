@@ -1,8 +1,11 @@
+@import url('styles.css');
+
 #passions-container {
     display: flex;
     gap: 50px;
     justify-content: center;
     margin: 30px;
+    animation: reveal 0.3s forwards;
 }
 
 .passionItem {
@@ -11,7 +14,7 @@
     border-radius: 25px;
     overflow: hidden;
     cursor: pointer;
-    transition: box-shadow 0.5s ease, transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .passionItem:hover {
@@ -46,9 +49,8 @@
 #esports,
 #music {
     display: none;
+    animation: reveal 0.3s forwards;
 }
-
-
 
 /* MUSIC SECTION */
 
@@ -114,7 +116,8 @@ h3 {
     border-collapse: collapse;
 }
 
-.songs-table th, .songs-table td {
+.songs-table th,
+.songs-table td {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
@@ -124,7 +127,8 @@ h3 {
     background-color: #f4f4f4;
 }
 
-.song-image, .linkImg {
+.song-image,
+.linkImg {
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -132,20 +136,31 @@ h3 {
 
 /* Hockey */
 
-/* #hockey {
-    margin: 10px;
-} */
-
-.player-container, .teams-container {
+.player-container,
+.teams-container,
+.game-container,
+.review-container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: stretch;
+
 }
 
-.playerItem, .teamItem {
+
+
+h4 {
+    font-size: 2em;
+    text-align: center;
+}
+
+.playerItem,
+.teamItem,
+.gameItem {
     width: 400px;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
     justify-content: center;
     background-color: white;
     margin: 10px;
@@ -153,12 +168,22 @@ h3 {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.player, .team {
-   font-weight: bold;
-   padding-top: 10px;
+.player,
+.team,
+.game {
+    font-weight: bold;
+    padding-top: 10px;
+    text-align: center;
 }
 
-.player-image, .team-image {
+.game {
+    font-size: 2em;
+    padding-bottom: 10px;
+}
+
+.player-image,
+.team-image,
+.game-image {
     max-width: 400px;
     height: 400px;
     object-fit: cover;
@@ -170,6 +195,8 @@ h3 {
     text-align: center;
     padding: 10px;
 }
+
+/* Teams */
 
 .teams {
     display: flex;
@@ -194,18 +221,82 @@ h3 {
     font-size: 1.35em;
 }
 
+/* GAMES */
+
+.game-container {
+    margin: 0px 40px;
+}
+
+.gameItem {
+    position: relative;
+    width: 360px;
+}
+
+.result-rank {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    font-size: 3em;
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.game-image {
+    width: 360px;
+    height: 360px;
+}
+
+/* Reviews */
+
+.review-container {
+    margin: 0px 100px;
+}
+
+.steam-review {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    flex: 1;
+    align-self: stretch;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.steamLink {
+    position: absolute;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
 @media (max-width: 1000px) {
     #passions-container {
         flex-wrap: wrap;
         gap: 10px;
     }
+
     .passionItem {
         width: 270px;
         height: 370px;
     }
+
     .artists-container {
         flex-wrap: wrap;
     }
+
     .artistsItem img {
         width: 180px;
         height: 200px;
@@ -217,7 +308,25 @@ h3 {
         width: 170px;
         height: 270px;
     }
+
     .titleDiv {
         font-size: 2em;
+    }
+
+    .game-container {
+        margin: 0px 0px;
+    }
+
+    .game-image {
+        width: 195px;
+        height: 195px;
+    }
+
+    .gameItem {
+        width: 195px;
+    }
+    
+    .game {
+        font-size: 1.4em;
     }
 }

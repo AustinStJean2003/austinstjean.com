@@ -1,3 +1,5 @@
+@import url('styles.css');
+
 * {
     box-sizing: border-box;
 }
@@ -28,6 +30,7 @@
     position: relative;
     background-color: inherit;
     width: 50%;
+    animation: reveal 0.3s forwards;
 }
 
 /* The circles on the timeline */
