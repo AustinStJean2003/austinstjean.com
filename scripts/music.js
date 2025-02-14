@@ -20,7 +20,6 @@ document.getElementById("passions-container").addEventListener("click", function
                     artistDiv.className = "artists-container";
                     const h3artists = document.createElement('h3');
                     h3artists.innerHTML = "Favoutire Artists"
-                    h3artists.innerHTML = "Favoutire Artists"
                     musicDiv.appendChild(h3artists)
                     data.artists.forEach(imgSrc => {
                         const artistItem = document.createElement('div');

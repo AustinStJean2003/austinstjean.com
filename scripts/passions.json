@@ -79,5 +79,36 @@
         "image": "/images/passions/music/songs/love.jpg",
         "link": "https://open.spotify.com/track/3i5qVV8azKqGFK4Gzdt5YS?si=a9c01393aa824e09"
       }
+    ],
+    "players": [
+        {
+          "name": "Quinn Hughes",
+          "description": "Team Captain of the Vancouver Canucks and Norris trophy winner. Quinn Hughes is one of our generation's most dynamic defensemen and proves it night in and out being the best player on a consistent basis by breaking NHL records in the process. Hughes is always a delight to watch as his magic is unfazed.",
+          "image": "/images/passions/hockey/hughes.jpg"
+        },
+        {
+          "name": "Thatcher Demko",
+          "description": "Starting Goalie for the Vancouver Canucks and Vezna trophy running up. Thatcher Demko is my favourite goalie I've had the pleasure of watching. Demko has battled through injury for a lot of his career but when he has his chance to defend his net, he always shows up standing on his head and being a brick wall for the Canucks. I really want a number 35 jersey.",
+          "image": "/images/passions/hockey/demko.png"
+        },
+        {
+          "name": "Alex Burrows",
+          "description": "THE DRAGON SLAYER! I started watching hockey in 2011 and Alex Burrows and the Canucks Cup run was a huge reason why I became a fan of the team. His grit, passion, and style of hockey always put a smile on my face and he was one of the best wingers to play with the twins, leaving his legacy with the Canucks. You could always count on him for scoring big goals. THEY SLAYED THE DRAGON! ",
+          "image": "/images/passions/hockey/burrows.png"
+        }
+    ],
+    "teams": [
+      {
+        "name": "VANCOUVER CANUCKS",
+        "image": "/images/passions/hockey/rogers.png",
+        "description": "I started watching hokcey back in 2011, prime time to watch one of the greatest Canucks teams go on a run to game 7 of the Stanley Cup final. Young 8 year old me wanted to cheer for a good Canadian team and they seemed like a perfect choice. Though didn't watch much hockey that year but it sparked an interest in me that has never left. I would love to be able to travel to B.C and catch a live game at Rogers Arena. The Canucks have and always will be my number 1 despite the ups and downs, I want to continue to beleive in this team. Go Canucks Go!",
+        "shortname": "canucks"
+      },
+      {
+        "name": "OTTAWA SENATORS",
+        "image": "/images/passions/hockey/ctc.jpg",
+        "description": "Everyone who watches hockey in my family are Senator fans. I'm the only different one with a favourite team being out west but I still support the Sens through all their games... expect against the Canucks. They are my home town team and I've been to numerous live game at the Canadian Tire Center. I want nothing more but to see lord Stanley come to the nation's captial and see the celebration parade through the streets of Ottawa. Going to live games is something I love doing and you can usually see me catching the live game when the Canucks are in town. Go Sens Go!",
+        "shortname": "sens"
+      }
     ]
 }
