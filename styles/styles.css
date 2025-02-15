@@ -90,7 +90,7 @@ main {
 
     .nav-links.active {
         display: flex;
-        animation: reveal 0.5s ease-in-out forwards;
+        animation: revealNav 0.5s ease-in-out forwards;
     }
 
     .menu-toggle {
@@ -154,7 +154,7 @@ footer img {
     margin: 10px 5px 0 5px;
 }
 
-@keyframes reveal {
+@keyframes revealNav {
     0% {
         top: -100px; /* Start above the container */
         opacity: 0; /* Start with opacity 0 (invisible) */

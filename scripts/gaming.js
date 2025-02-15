@@ -100,7 +100,9 @@ document.getElementById("passions-container").addEventListener("click", function
                     // Append everything to the main container
                     container.appendChild(reviewsDiv);
                     createScrollToTopButton(container)
-
+                    setTimeout(() => {
+                        container.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
                 });
         }
     }

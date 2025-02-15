@@ -67,7 +67,11 @@ document.getElementById("passions-container").addEventListener("click", function
                     })
                     container.appendChild(teamsDiv)
                     createScrollToTopButton(container)
+                    setTimeout(() => {
+                        container.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
                 });
+
         }
     }
 })

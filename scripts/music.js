@@ -112,7 +112,10 @@ document.getElementById("passions-container").addEventListener("click", function
                     table.appendChild(tbody);
                     songsContainer.appendChild(table);
                     musicDiv.appendChild(songsContainer);
-                    createScrollToTopButton(container)
+                    createScrollToTopButton(container);
+                    setTimeout(() => {
+                        container.scrollIntoView({ behavior: "smooth" });
+                    }, 100);
                 })
         }
     }
