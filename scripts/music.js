@@ -27,7 +27,7 @@ document.getElementById("passions-container").addEventListener("click", function
                         const artistTitle = document.createElement('div');
                         artistItem.className = "artistsItem";
                         artistTitle.className = "artist";
-                        const artistText = imgSrc.match(/([^\/]+)(?=\.[^.]+$)/)[1].toUpperCase();
+                        const artistText = imgSrc.match(/([^\/]+)(?=\.[^.]+$)/)[1].replace(/([A-Z])/g, ' $1').trim().toUpperCase();
                         let img = document.createElement('img');
                         img.src = imgSrc;
                         img.alt = artistText;

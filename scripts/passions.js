@@ -10,6 +10,7 @@ fetch("/scripts/passions.json")
             titleDiv.className = "titleDiv"
             const titleText = imgSrc.match(/([^\/]+)(?=\.[^.]+$)/)[1].toUpperCase();
             titleDiv.innerHTML = titleText;
+            titleDiv.innerHTML += `<i class="fa-solid fa-chevron-down"></i>`;
             let img = document.createElement('img');
             img.src = imgSrc;
             img.alt = titleText;

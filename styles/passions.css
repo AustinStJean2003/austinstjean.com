@@ -38,10 +38,14 @@
     padding: 20px 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
     color: white;
-    font-size: 3em;
+    font-size: 2.6em;
     text-align: center;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+
+i {
+    margin-left: 10px;
 }
 
 #hockey,
@@ -305,12 +309,12 @@ h4 {
 
 @media (max-width: 610px) {
     .passionItem {
-        width: 170px;
+        width: 180px;
         height: 270px;
     }
 
     .titleDiv {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .game-container {
