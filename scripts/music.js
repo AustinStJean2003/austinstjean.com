@@ -1,7 +1,7 @@
 import { createScrollToTopButton } from './passions.js';
 document.getElementById("passions-container").addEventListener("click", function (event) {
     const clickedItem = event.target.closest(".passionItem");
-    
+
     if (clickedItem.textContent == "MUSIC") {
         const titleText = clickedItem.querySelector(".titleDiv").innerText.toLowerCase();
 
@@ -52,9 +52,8 @@ document.getElementById("passions-container").addEventListener("click", function
                     const thead = document.createElement("thead");
                     thead.innerHTML = `
             <tr>
-                <th>#</th>
-                <th>Image</th>
-                <th>Title</th>
+                <th>Rank</th>
+                <th>Song Title</th>
                 <th>Artist</th>
                 <th>Link</th>
             </tr>
@@ -71,15 +70,6 @@ document.getElementById("passions-container").addEventListener("click", function
                         const numCell = document.createElement("td");
                         numCell.textContent = index + 1;
                         row.appendChild(numCell);
-
-                        // Image column
-                        const imgCell = document.createElement("td");
-                        const img = document.createElement("img");
-                        img.src = song.image;
-                        img.alt = song.name;
-                        img.className = "song-image";
-                        imgCell.appendChild(img);
-                        row.appendChild(imgCell);
 
                         // Title column
                         const titleCell = document.createElement("td");
@@ -112,6 +102,21 @@ document.getElementById("passions-container").addEventListener("click", function
                     table.appendChild(tbody);
                     songsContainer.appendChild(table);
                     musicDiv.appendChild(songsContainer);
+                    const videoContainer = document.createElement('div');
+                    videoContainer.className = "video-container"
+                    const videoDiv = document.createElement('div');
+                    videoDiv.className = "video-div"
+                    const videoText = document.createElement('div');
+                    videoText.className = "video-text"
+                    videoText.innerHTML = "NF Concert at the Canadian Tire Center, September 2nd 2023"
+                    const video = document.createElement('video');
+                    video.src = '/videos/nf_concert.mov';
+                    video.controls = true; 
+                    video.autoplay = false;
+                    videoDiv.appendChild(video);
+                    videoDiv.appendChild(videoText);
+                    videoContainer.appendChild(videoDiv)
+                    musicDiv.appendChild(videoContainer);
                     createScrollToTopButton(container);
                     setTimeout(() => {
                         container.scrollIntoView({ behavior: "smooth" });

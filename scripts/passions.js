@@ -32,6 +32,8 @@ document.body.addEventListener('click', function(event) {
         hockey.innerHTML = "";
         esports.innerHTML = "";
         gaming.innerHTML = "";
+        const extraSpace = document.getElementById('footer');
+        extraSpace.style.paddingBottom = "0px";
     }
 });
 
@@ -45,7 +47,7 @@ function createScrollToTopButton(container) {
 
     const upArrow = document.createElement('span');
     upArrow.classList.add('up-arrow');
-    upArrow.innerHTML = '&#8593;'; // Up arrow character
+    upArrow.innerHTML = '<i class="fa-solid fa-chevron-up"></i>'; // Up arrow character
 
     const line = document.createElement('span');
     line.classList.add('line');

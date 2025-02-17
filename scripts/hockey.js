@@ -65,7 +65,13 @@ document.getElementById("passions-container").addEventListener("click", function
                         teamDiv.appendChild(description)
                         teamsDiv.appendChild(teamDiv)
                     })
-                    container.appendChild(teamsDiv)
+                    container.appendChild(teamsDiv);
+                    const disclaimer = document.createElement('div');
+                    disclaimer.id = "disclaimer";
+                    disclaimer.innerHTML = "This website is not affiliated with, endorsed, or sponsored by the NHL. All images and trademarks are the property of their respective owners. No copyright infringement is intended.";
+                    container.appendChild(disclaimer);
+                    const extraSpace = document.getElementById('footer');
+                    extraSpace.style.paddingBottom = `${disclaimer.offsetHeight}px`;
                     createScrollToTopButton(container)
                     setTimeout(() => {
                         container.scrollIntoView({ behavior: "smooth" });

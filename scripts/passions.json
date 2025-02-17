@@ -1,9 +1,8 @@
 {
   "buttons": [
     "/images/passions/music.jpg",
-    "/images/passions/hockey.png",
-    "/images/passions/gaming.jpg",
-    "/images/passions/esports.jpg"
+    "/images/passions/hockey.jpg",
+    "/images/passions/gaming.jpg"
   ],
   "artists": [
     "/images/passions/music/artists/nf.jpg",
@@ -16,67 +15,56 @@
     {
       "name": "September",
       "artist": "Chole Moriondo",
-      "image": "/images/passions/music/songs/september.jpg",
       "link": "https://open.spotify.com/track/5FsVTBjnb6cvA8FnoCVjk5?si=63b6bdbba5454c4a"
     },
     {
       "name": "Missing Her So",
       "artist": "Atli",
-      "image": "/images/passions/music/songs/missing.png",
       "link": "https://open.spotify.com/track/4VMvky1dEtKe2o3UNvHLXI?si=81b652885bd145a7"
     },
     {
       "name": "What gives",
       "artist": "Jake Hill",
-      "image": "/images/passions/music/songs/gives.jpg",
       "link": "https://open.spotify.com/track/522cGPxIHT3rZ5nu7N9zu3?si=b1dada1c6d474bec"
     },
     {
       "name": "Beauty In Death",
       "artist": "Chase Atlantic",
-      "image": "/images/passions/music/songs/beauty.jpg",
       "link": "https://open.spotify.com/track/0fAbw0psTJ6stqYftTeQqM?si=a64aef013f5a47ec"
     },
     {
       "name": "Happy",
       "artist": "NF",
-      "image": "/images/passions/music/songs/happy.jpg",
       "link": "https://open.spotify.com/track/3ZEno9fORwMA1HPecdLi0R?si=e7e3d96099094fac"
     },
     {
       "name": "Nightlight",
       "artist": "Illenium",
-      "image": "/images/passions/music/songs/nightlight.jpg",
       "link": "https://open.spotify.com/track/06kxa3al7bUqRRo5nAFduZ?si=4c3738b5357549d8"
     },
     {
       "name": "Heaven and Back",
       "artist": "Chase Atlantic",
-      "image": "/images/passions/music/songs/heaven.jpg",
-      "link": ""
+      "link": "https://open.spotify.com/track/1JdQibdvxgcrB8Rv1KFndw?si=2d587bd89bd14387"
     },
     {
       "name": "No Matter the Season",
       "artist": "Sara Kays",
-      "image": "/images/passions/music/songs/season.jpg",
       "link": "https://open.spotify.com/track/1JdQibdvxgcrB8Rv1KFndw?si=dd1ea635d58a405a"
     },
     {
       "name": "ilyily",
       "artist": "Cadence Flooria",
-      "image": "/images/passions/music/songs/ilyily.jpg",
       "link": "https://open.spotify.com/track/4ewiHg0NkG36ky2JT3OwiB?si=219c7824c8644dc1"
     },
     {
       "name": "Run Away to Mars",
       "artist": "TALK",
-      "image": "/images/passions/music/songs/mars.jpg",
       "link": "https://open.spotify.com/track/16ufCOlMEIJkFstIYtQT4w?si=9d8e2784c2904313"
     },
     {
       "name": "If you Want Love",
       "artist": "NF",
-      "image": "/images/passions/music/songs/love.jpg",
       "link": "https://open.spotify.com/track/3i5qVV8azKqGFK4Gzdt5YS?si=a9c01393aa824e09"
     }
   ],
@@ -100,7 +88,7 @@
   "teams": [
     {
       "name": "VANCOUVER CANUCKS",
-      "image": "/images/passions/hockey/rogers.png",
+      "image": "/images/passions/hockey/rogers.jpg",
       "description": "I started watching hokcey back in 2011, prime time to watch one of the greatest Canucks teams go on a run to game 7 of the Stanley Cup final. Young 8 year old me wanted to cheer for a good Canadian team and they seemed like a perfect choice. Though didn't watch much hockey that year but it sparked an interest in me that has never left. I would love to be able to travel to B.C and catch a live game at Rogers Arena. The Canucks have and always will be my number 1 despite the ups and downs, I want to continue to beleive in this team. Go Canucks Go!",
       "shortname": "canucks"
     },
