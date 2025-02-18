@@ -1,5 +1,11 @@
 @import url('styles.css');
 
+.location {
+    color: #008299;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 * {
     box-sizing: border-box;
 }
