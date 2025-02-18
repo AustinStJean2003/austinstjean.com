@@ -5,11 +5,31 @@
     "/images/passions/gaming.jpg"
   ],
   "artists": [
-    "/images/passions/music/artists/nf.jpg",
-    "/images/passions/music/artists/chaseAtlantic.png",
-    "/images/passions/music/artists/jakeHill.jpeg",
-    "/images/passions/music/artists/illenium.png",
-    "/images/passions/music/artists/saraKays.jpg"
+    {
+      "image": "/images/passions/music/artists/nf.jpg",
+      "name": "NF",
+      "link": "https://open.spotify.com/artist/6fOMl44jA4Sp5b9PpYCkzz?si=GcTxdzAGSaaFp1QzYOEHew"
+    },
+    {
+      "image": "/images/passions/music/artists/chaseAtlantic.png",
+      "name": "Chase Atlantic",
+      "link": "https://open.spotify.com/artist/7cYEt1pqMgXJdq00hAwVpT?si=pSJuUHd1QwKuBYBCO5FFDQ"
+    },
+    {
+      "image": "/images/passions/music/artists/jakeHill.jpeg",
+      "name": "Jake Hill",
+      "link": "https://open.spotify.com/artist/26JloX1vHxGGrGUVeMItFJ?si=jZxIz6T_RNCAhHnVsh0hRQ"
+    },
+    {
+      "image": "/images/passions/music/artists/illenium.png",
+      "name": "Illenium",
+      "link": "https://open.spotify.com/artist/45eNHdiiabvmbp4erw26rg?si=oITdp3JnTu21Fp7k3_k35g"
+    },
+    {
+      "image": "/images/passions/music/artists/saraKays.jpg",
+      "name": "Sara Kays",
+      "link": "https://open.spotify.com/artist/7Lk9V7E1u5gqSHmtcKlOqH?si=-U6HQmuqStuzb05CUTBysQ"
+    }
   ],
   "songs": [
     {

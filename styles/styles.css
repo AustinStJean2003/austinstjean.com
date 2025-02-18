@@ -78,6 +78,10 @@ main {
     text-decoration: none;
 }
 
+#attribution i {
+    color: white;
+}
+
 @media (max-width: 1500px) {
     .navbar {
         padding: 5px 10%;

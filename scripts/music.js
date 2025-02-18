@@ -22,20 +22,25 @@ document.getElementById("passions-container").addEventListener("click", function
                     const h3artists = document.createElement('h3');
                     h3artists.innerHTML = "Favoutire Artists"
                     musicDiv.appendChild(h3artists)
-                    data.artists.forEach(imgSrc => {
+                    data.artists.forEach(artist => {
                         const artistItem = document.createElement('div');
                         const artistTitle = document.createElement('div');
+                        const artistLink = document.createElement('a');
                         artistItem.className = "artistsItem";
                         artistTitle.className = "artist";
-                        const artistText = imgSrc.match(/([^\/]+)(?=\.[^.]+$)/)[1].replace(/([A-Z])/g, ' $1').trim().toUpperCase();
+                        artistLink.classList = "artistLink";
+                        artistLink.href = artist.link;
+                        artistLink.target = "_blank";
+                        const artistText = artist.name;
                         let img = document.createElement('img');
-                        img.src = imgSrc;
+                        img.src = artist.image;
                         img.alt = artistText;
                         img.title = artistText;
                         artistItem.appendChild(img)
                         artistTitle.innerHTML = artistText;
                         artistItem.appendChild(artistTitle);
-                        artistDiv.appendChild(artistItem)
+                        artistLink.appendChild(artistItem);
+                        artistDiv.appendChild(artistLink);
                         musicDiv.appendChild(artistDiv);
                     })
 
