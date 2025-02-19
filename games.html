@@ -1,17 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Games</title>
     <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/games.css">
 </head>
+
 <body>
     <div id="navbar"></div>
     <main>
-        <p>Page is under contruction</p>
+        <div class="images-container">
+            <button id="sudoku-button">
+                <img src="/images/miniGames/sudoku.jpg" alt="Icon" class="button-icon">
+                <span class="button-text">Sukodu</span>
+            </button>
+            <button id="wordle-button">
+                <img src="/images/miniGames/wordle.jpg" alt="Icon" class="button-icon">
+                <span class="button-text">Wordle</span>
+            </button>
+        </div>
+        <div id="sudoku-container">
+            <div class="container" id="container"></div>
+            <div class="buttonContainer">
+                <button class="button" id="solveButton">Solve</button>
+                <button class="button" id="resetButton">Reset</button>
+                <button class="button" id="newGameButton">New Game</button>
+                <button class="button" id="hintButton">Get Hint</button>
+            </div>
+        </div>
     </main>
     <div id="footer"></div>
     <script src="/scripts/include.js"></script>
+    <script src="/scripts/games.js"></script>
 </body>
+
 </html>

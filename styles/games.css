@@ -1,0 +1,124 @@
+@import url('styles.css');
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    animation: reveal 0.3s forwards;
+    overflow: hidden;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    width: calc(80vmin / 8);
+    height: calc(80vmin / 8);
+    max-width: 40px;
+    max-height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 40px;
+    box-sizing: border-box;
+    font-size: calc(4vmin);
+}
+
+.cell:nth-child(3n) {
+    border-right: 3px solid black;
+}
+
+.cell:nth-child(9n+1) {
+    border-left: 3px solid black;
+}
+
+.row:nth-child(3n) .cell {
+    border-bottom: 3px solid black;
+}
+
+.row:nth-child(1) .cell {
+    border-top: 3px solid black;
+}
+
+.lightBackground {
+    background-color: #A9A9A9;
+}
+
+.darkBackground {
+    background-color: #EBF3E8;
+}
+
+.buttonContainer {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    animation: reveal 0.3s forwards;
+}
+
+.buttonContainer button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#sudoku-container {
+    display: none;
+}
+
+.button {
+    background-color: #008299;
+    color: white;
+    border: 1px solid #008299;
+    border-radius: 5px;
+}
+
+/* BUTTONS */
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px;
+}
+
+.images-container img {
+    border-radius: 10px;
+}
+
+#sudoku-button, #wordle-button {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    padding: 10px 15px;
+    border: none;
+    background-color: white;
+    color: #008299;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.5em;
+    transition: all 0.3s ease-in-out;
+    overflow: auto;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
+
+.button-icon {
+    max-width: 200px;
+    max-height: 200px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.button-text {
+    font-weight: bold;
+}
