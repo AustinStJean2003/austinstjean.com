@@ -1,12 +1,9 @@
 document.getElementById("sudoku-button").addEventListener("click", () => {
     const sudokuContainer = document.getElementById("sudoku-container");
     sudokuContainer.style.display = "block";
+    const wordleContainer = document.getElementById("wordle-container");
+    wordleContainer.style.display = "none";
 });
-
-// document.getElementById("wordle-button").addEventListener("click", () => {
-//     const wordleContainer = document.getElementById("wordle-container");
-//     wordleContainer.style.display = "block";
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById("container");
@@ -111,10 +108,48 @@ document.addEventListener("DOMContentLoaded", function () {
         createSudokuGrid(puzzle);
     }
 
+    function checkWin() {
+        let isComplete = true;
+        let isCorrect = true;
+        let inputs = document.querySelectorAll(".cell");
+    
+        inputs.forEach((cell, index) => {
+            let row = Math.floor(index / 9);
+            let col = index % 9;
+    
+            if (cell.value === "") {
+                isComplete = false; // If any cell is empty, board is not complete
+            } else {
+                let userValue = parseInt(cell.value, 10);
+                puzzle[row][col] = userValue; // Update puzzle array with user input
+    
+                if (userValue !== solvedPuzzle[row][col]) {
+                    isCorrect = false; // Check if number is correct
+                }
+            }
+        });
+    
+        if (isComplete) {
+            const message = document.getElementById("sudoku-message");
+            if (isCorrect) {
+                message.innerHTML = "";
+                message.style.opacity = 1
+                message.className = "winner";
+                message.classList.add("fade-out");
+                message.innerHTML = "🎉 You Won! Congratulations! 🎉"
+            } else {
+                message.innerHTML = "";
+                message.style.opacity = 1
+                message.className = "loser";
+                message.classList.add("fade-out");
+                message.innerHTML = "Something is wrong. Check your numbers!"
+            }
+        }
+    }
+
     function getHint() {
         let emptyCells = [];
-        let inputs = document.querySelectorAll(".cell");
-
+        // Find all empty cells
         for (let row = 0; row < 9; row++) {
             for (let col = 0; col < 9; col++) {
                 if (puzzle[row][col] === 0) {
@@ -122,18 +157,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
-
+        // Select a random empty cell and update it with the correct value from solvedPuzzle
         if (emptyCells.length > 0) {
-            let randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
-            let { row, col } = randomCell;
+            let randomIndex = Math.floor(Math.random() * emptyCells.length);
+            let { row, col } = emptyCells[randomIndex];
             puzzle[row][col] = solvedPuzzle[row][col];
             createSudokuGrid(puzzle);
+            checkWin();
         }
     }
 
     let initialPuzzle = generateValidSudoku();
     let puzzle = JSON.parse(JSON.stringify(initialPuzzle));
     let solvedPuzzle = solveSudoku(puzzle);
+
+    document.getElementById("container").addEventListener("input", () => {
+        checkWin();
+    });
+    
 
     createSudokuGrid(puzzle);
 

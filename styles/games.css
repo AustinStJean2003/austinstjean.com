@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 20px;
     animation: reveal 0.3s forwards;
     overflow: hidden;
 }
@@ -60,12 +60,6 @@
     animation: reveal 0.3s forwards;
 }
 
-.buttonContainer button {
-    padding: 5px 10px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 #sudoku-container {
     display: none;
 }
@@ -75,6 +69,9 @@
     color: white;
     border: 1px solid #008299;
     border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 /* BUTTONS */
@@ -121,4 +118,133 @@
 
 .button-text {
     font-weight: bold;
+}
+
+/* MESSAGE */
+
+.winner {
+    background-color: #38ce38;
+}
+
+.loser {
+    background-color: #e01919;
+}
+
+#sudoku-message, #wordle-message {
+    width: 360px;
+    margin: auto;
+    font-size: 1.4em;
+    text-align: center;
+    color: white;
+    padding: 10px 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+/* WORDLE */
+
+#wordle-container {
+    display: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: white;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.tile {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    border: 2px solid white;
+    background-color: #222;
+}
+
+.correct { background-color: green; }
+.present { background-color: orange; }
+.absent { background-color: grey; }
+
+#keyboard {
+    margin-top: 20px;
+}
+
+/* keyboard */
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    margin: 5px 0;
+}
+
+.key {
+    margin: 3px;
+    text-transform: uppercase;
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    width: calc(65vmin / 8);
+    height: calc(80vmin / 8);
+    font-size: clamp(14px, 4.5vmin, 24px); 
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.key.correct {
+    background-color: #6aaa64;
+    color: white;
+}
+
+.key.present {
+    background-color: #c9b458;
+    color: white;
+}
+
+.key.absent {
+    background-color: #787c7e;
+    color: white;
+}
+
+/* Adjust row alignment to look like a real keyboard */
+.keyboard-row:nth-child(2) {
+    margin-left: 20px;
+}
+
+.fade-out {
+    animation: fadeOut 2s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
 }
