@@ -128,6 +128,7 @@
 
 .loser {
     background-color: #e01919;
+    margin: auto;
 }
 
 #sudoku-message, #wordle-message {
@@ -140,6 +141,11 @@
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
     margin-top: 20px;
+}
+
+.message {
+    height: 80px;
+    overflow: hidden;
 }
 
 /* WORDLE */
@@ -228,23 +234,11 @@ body {
     color: white;
 }
 
+#key-Enter {
+    min-width: 110px;
+}
+
 /* Adjust row alignment to look like a real keyboard */
 .keyboard-row:nth-child(2) {
     margin-left: 20px;
-}
-
-.fade-out {
-    animation: fadeOut 2s ease-in-out forwards;
-    animation-delay: 3s;
-}
-
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
 }

@@ -132,17 +132,18 @@ document.addEventListener("DOMContentLoaded", function () {
         if (isComplete) {
             const message = document.getElementById("sudoku-message");
             if (isCorrect) {
+                message.style.display = "block";
                 message.innerHTML = "";
-                message.style.opacity = 1
                 message.className = "winner";
-                message.classList.add("fade-out");
                 message.innerHTML = "🎉 You Won! Congratulations! 🎉"
             } else {
+                message.style.display = "block";
                 message.innerHTML = "";
-                message.style.opacity = 1
                 message.className = "loser";
-                message.classList.add("fade-out");
-                message.innerHTML = "Something is wrong. Check your numbers!"
+                message.innerHTML = "Inncorect. Check your numbers!"
+                setTimeout(() => {
+                    message.style.display = "none";
+                }, 2000);
             }
         }
     }

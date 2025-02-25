@@ -4,13 +4,17 @@
     display: flex;
     gap: 50px;
     justify-content: center;
-    margin: 30px;
     animation: reveal 0.3s forwards;
+    margin: 30px 0px;
 }
 
 .passionItem {
     position: relative;
     display: inline-block;
+    width: calc(90vmin / 2);
+    height: calc(125vmin / 2);
+    max-width: 320px;
+    max-height: 420px;
     border-radius: 25px;
     overflow: hidden;
     cursor: pointer;
@@ -23,8 +27,10 @@
 }
 
 .passionItem img {
-    width: 320px;
-    height: 420px;
+    width: calc(90vmin / 2);
+    height: calc(125vmin / 2);
+    max-width: 320px;
+    max-height: 420px;
     object-fit: cover;
     border-radius: 25px;
     display: block;
@@ -192,7 +198,6 @@ h4 {
 .playerItem,
 .teamItem,
 .gameItem {
-    width: 400px;
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -201,6 +206,24 @@ h4 {
     margin: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.playerItem,
+.teamItem {
+    width: 400px;
+
+}
+
+.gameItem, .game-image {
+    width: calc(80vmin / 2);
+
+}
+
+.game-image {
+    height: calc(80vmin / 2);
+    object-fit: cover;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .player,
@@ -217,8 +240,7 @@ h4 {
 }
 
 .player-image,
-.team-image,
-.game-image {
+.team-image {
     max-width: 400px;
     height: 400px;
     object-fit: cover;
@@ -264,7 +286,7 @@ h4 {
 
 .gameItem {
     position: relative;
-    width: 360px;
+    /* width: 360px; */
 }
 
 .result-rank {
@@ -276,11 +298,6 @@ h4 {
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
     z-index: 10;
-}
-
-.game-image {
-    width: 360px;
-    height: 360px;
 }
 
 /* Reviews */
@@ -323,11 +340,6 @@ h4 {
         gap: 10px;
     }
 
-    .passionItem {
-        width: 270px;
-        height: 370px;
-    }
-
     .artists-container {
         flex-wrap: wrap;
     }
@@ -344,10 +356,6 @@ h4 {
 }
 
 @media (max-width: 610px) {
-    .passionItem {
-        width: 180px;
-        height: 270px;
-    }
 
     .titleDiv {
         font-size: 1.8em;
@@ -355,15 +363,6 @@ h4 {
 
     .game-container {
         margin: 0px 0px;
-    }
-
-    .game-image {
-        width: 195px;
-        height: 195px;
-    }
-
-    .gameItem {
-        width: 195px;
     }
     
     .game {
@@ -393,7 +392,3 @@ h4 {
     z-index: 1000;
     margin-top: 10px;
 }
-
-/* #footer {
-    margin: 25px 0px !important; 
-} */

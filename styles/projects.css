@@ -28,12 +28,15 @@ h1 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .project-images img {
-    width: 300px;
-    height: 600px;
-    margin: 10px;
+    width: calc(85vmin / 2);
+    height: calc(165vmin / 2);
+    max-width: 300px;
+    max-height: 600px;
+    /* margin: 5px; */
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
     object-fit:fill;
@@ -85,7 +88,8 @@ ul {
     grid-template-columns: 1fr;
     padding: 30px 0;
     justify-items: center;
-    margin-right: 55px;
+    margin-right: 70px;
+
 }
 
 .network-item {
@@ -238,11 +242,11 @@ a {
        font-weight: lighter;
     }
     
-    .project-images img {
+    /* .project-images img {
         width: 200px;
         height: 400px;
         margin: 2px;
-    }
+    } */
     
 }
 

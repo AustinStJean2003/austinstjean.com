@@ -3,7 +3,6 @@ let currentWord = "";
 let currentGuess = "";
 let attempts = [];
 
-
 document.getElementById("wordle-button").addEventListener("click", () => {
     const wordleContainer = document.getElementById("wordle-container");
     const sudokuContainer = document.getElementById("sudoku-container");
@@ -15,13 +14,9 @@ function createKeyboard() {
     const keyboardContainer = document.getElementById("keyboard");
     keyboardContainer.innerHTML = "";
 
-    const rows = [
-        "QWERTYUIOP",
-        "ASDFGHJKL",
-        "ZXCVBNM"
-    ];
+    const rows = ["QWERTYUIOP", "ASDFGHJKL", "ZXCVBNM"];
 
-    rows.forEach((row, rowIndex) => {
+    rows.forEach((row) => {
         let rowDiv = document.createElement("div");
         rowDiv.classList.add("keyboard-row");
 
@@ -36,83 +31,49 @@ function createKeyboard() {
 
         keyboardContainer.appendChild(rowDiv);
     });
-}
 
+    // Create bottom row div
+    const bottomRowDiv = document.createElement("div");
+    bottomRowDiv.classList.add("keyboard-row");
 
-function handleKeyPress(letter) {
-    if (currentGuess.length < 5) {
-        currentGuess += letter;
-        updateBoard();
-    }
-}
-
-async function loadWords() {
-    const response = await fetch('/files/words.txt');
-    const text = await response.text();
-    words = text.split('\n').map(word => word.trim()).filter(word => word.length === 5);
-    newGame();
-}
-
-function newGame() {
-    currentWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
-    currentGuess = "";
-    attempts = [];
-    document.getElementById("game-board").innerHTML = "";
-    createBoard();
-    createKeyboard()
-}
-
-function createBoard() {
-    for (let i = 0; i < 6; i++) {
-        for (let j = 0; j < 5; j++) {
-            let tile = document.createElement("div");
-            tile.classList.add("tile");
-            tile.id = `tile-${i}-${j}`;
-            document.getElementById("game-board").appendChild(tile);
+    let enterButton = document.createElement("button");
+    enterButton.textContent = "Enter";
+    enterButton.id = "key-Enter";
+    enterButton.classList.add("key");
+    enterButton.addEventListener("click", () => {
+        if (currentGuess.length === 5) {
+            checkGuess();
         }
-    }
-}
+    });
 
-document.addEventListener("keydown", (e) => {
-    let letter = e.key.toUpperCase();
-    if (/^[A-Z]$/.test(letter) && currentGuess.length < 5) {
-        currentGuess += letter;
-        updateBoard();
-    } else if (e.key === "Enter" && currentGuess.length === 5) {
-        checkGuess();
-    } else if (e.key === "Backspace") {
+    let backspaceButton = document.createElement("button");
+    backspaceButton.textContent = "⌫";
+    backspaceButton.id = "key-Backspace";
+    backspaceButton.classList.add("key");
+    backspaceButton.addEventListener("click", () => {
         currentGuess = currentGuess.slice(0, -1);
         updateBoard();
-    }
-});
+    });
 
-function updateBoard() {
-    let row = attempts.length;
-    for (let i = 0; i < 5; i++) {
-        let tile = document.getElementById(`tile-${row}-${i}`);
-        tile.textContent = currentGuess[i] || "";
-    }
+    bottomRowDiv.appendChild(backspaceButton);
+    bottomRowDiv.appendChild(enterButton);
+    keyboardContainer.appendChild(bottomRowDiv);
 }
 
-function updateKeyboard(letter, status) {
-    let key = document.getElementById(`key-${letter}`);
-    if (!key) return;
-
-    if (status === "correct") {
-        key.classList.add("correct");
-    } else if (status === "present" && !key.classList.contains("correct")) {
-        key.classList.add("present");
-    } else if (status === "absent" && !key.classList.contains("correct") && !key.classList.contains("present")) {
-        key.classList.add("absent");
-    }
-}
 
 function checkGuess() {
     let row = attempts.length;
     if (!words.includes(currentGuess.toLowerCase())) {
-        alert("Not a valid word!");
+        const message = document.getElementById("wordle-message");
+        message.style.display = "block";
+        message.className = "loser";
+        message.innerHTML = `Not a valid word!`;
+        setTimeout(() => {
+            message.style.display = "none";
+        }, 2000);
         return;
     }
+
     attempts.push(currentGuess);
 
     let letterCounts = {};
@@ -146,22 +107,98 @@ function checkGuess() {
             }
         }
     }
+
     const message = document.getElementById("wordle-message");
 
     if (currentGuess === currentWord) {
+        message.style.display = "block";
         message.className = "winner";
-        message.classList.add("fade-out"); // Apply fade-out effect
-        message.innerHTML = "🎉 You Won! Congratulations! 🎉"
+        message.innerHTML = "🎉 You Won! Congratulations! 🎉";
     } else if (attempts.length >= 6) {
+        message.style.display = "block";
         message.className = "loser";
-        message.classList.add("fade-out"); // Apply fade-out effect
-        message.innerHTML = "Thank you for playing! Try again."
+        message.innerHTML = `The word was <b>${currentWord}</b>. Try again!`;
     }
-
     currentGuess = "";
 }
 
+function handleKeyPress(letter) {
+    if (currentGuess.length < 5) {
+        currentGuess += letter;
+        updateBoard();
+    }
+}
+
+async function loadWords() {
+    const response = await fetch('/files/words.txt');
+    const text = await response.text();
+    words = text.split('\n').map(word => word.trim()).filter(word => word.length === 5);
+    newGame();
+}
+
+function newGame() {
+    currentWord = words[Math.floor(Math.random() * words.length)].toUpperCase();
+    currentGuess = "";
+    attempts = [];
+
+    document.getElementById("game-board").innerHTML = "";
+    createBoard();
+    createKeyboard();
+
+    let message = document.getElementById("wordle-message");
+    message.innerHTML = "";
+    message.className = "";
+}
+
+function createBoard() {
+    const board = document.getElementById("game-board");
+    board.innerHTML = "";
+
+    for (let i = 0; i < 6; i++) {
+        for (let j = 0; j < 5; j++) {
+            let tile = document.createElement("div");
+            tile.classList.add("tile");
+            tile.id = `tile-${i}-${j}`;
+            board.appendChild(tile);
+        }
+    }
+}
+
+document.addEventListener("keydown", (e) => {
+    let letter = e.key.toUpperCase();
+    if (/^[A-Z]$/.test(letter) && currentGuess.length < 5) {
+        currentGuess += letter;
+        updateBoard();
+    } else if (e.key === "Enter" && currentGuess.length === 5) {
+        checkGuess();
+    } else if (e.key === "Backspace") {
+        currentGuess = currentGuess.slice(0, -1);
+        updateBoard();
+    }
+});
+
+function updateBoard() {
+    let row = attempts.length;
+    for (let i = 0; i < 5; i++) {
+        let tile = document.getElementById(`tile-${row}-${i}`);
+        if (tile) {
+            tile.textContent = currentGuess[i] || "";
+        }
+    }
+}
+
+function updateKeyboard(letter, status) {
+    let key = document.getElementById(`key-${letter}`);
+    if (!key) return;
+
+    if (status === "correct") {
+        key.classList.add("correct");
+    } else if (status === "present" && !key.classList.contains("correct")) {
+        key.classList.add("present");
+    } else if (status === "absent" && !key.classList.contains("correct") && !key.classList.contains("present")) {
+        key.classList.add("absent");
+    }
+}
 
 document.getElementById("new-game").addEventListener("click", newGame);
-
 loadWords();
